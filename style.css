@@ -1,0 +1,158 @@
+:root {
+  /* main colours */
+  --main-bg-color: #F1E7E5;
+  --main-text-color: #4f362f;
+  --main-title-color: #C38783;
+
+  /* secondary colours */
+  --other-bg-color: #BCA59F;
+  --other-title-color: #906D64;
+  --other-text-color: #906D64;
+  --highlight-color: #D2A689;
+
+  /* other colours */
+  --white-color: #f9f9f9;
+  --green-color: #9EA476;
+  --yellow-color: #F5DAAF;
+
+  /* shadows */
+  --shadow-title-color: #904f4a;
+  --title-shadow: 2px 2px 1px #904f4a;
+
+  /* fonts */
+  --main-font: "EB Garamond", serif;
+  --title-font: "Gochi Hand", serif;
+}
+
+html {
+  background-color: var(--main-bg-color);
+}
+
+body {
+  max-width: 60em;
+  margin: 10px auto;
+  justify-content: center;
+
+  font-family: var(--main-font);
+  color: var(--main-text-color);
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+main {
+  display: flex;
+
+  @media (max-width: 60em) {
+    display: block;
+  }
+}
+
+
+h2 {
+  font-family: var(--title-font);
+  color: var(--other-title-color);
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1.4em;
+  text-align: center;
+
+  margin-bottom: 0.5em;
+}
+
+#options {
+  display: flex;
+
+  @media (max-width: 60em) {
+    display: flex;
+    justify-content: center;
+  }
+
+  div {
+    width: 14em;
+    display: grid;
+  }
+
+  label {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: var(--other-bg-color);
+    color: var(--main-text-color);
+    ;
+
+    &:hover {
+      background-color: var(--highlight-color);
+      color: var(--main-text-color);
+    }
+
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  input[type="checkbox"]:checked+label {
+    background-color: var(--green-color);
+    color: var(--white-color);
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  width: 15em;
+  padding: 10px 20px;
+  margin: auto;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--main-title-color);
+
+  font-family: var(--title-font);
+  color: var(--white-color);
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.5em;
+  text-align: center;
+
+  &:hover {
+    background-color: var(--highlight-color);
+    color: var(--main-text-color);
+  }
+
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#translation {
+  width: 100%;
+  max-width: 80vw;
+  display: flex;
+  flex-direction: column;
+  padding: 3.8em 0em 2em 2em;
+
+  article {
+    margin: 0.5em;
+
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    color: var(--main-text-color);
+    ;
+
+    &:hover {
+      background-color: var(--highlight-color);
+      color: var(--main-text-color);
+    }
+
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+}
